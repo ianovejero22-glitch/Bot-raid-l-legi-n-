@@ -232,6 +232,11 @@ async def banall(interaction: discord.Interaction, message: str):
 
 
 import os
+from discord.ext import commands
 
-bot_token = os.getenv("TOKEN")  # Obtiene el token de Railway
-bot.run(bot_token)
+bot = commands.Bot(command_prefix="!", intents=discord.Intents.all())
+
+# Tus eventos y comandos van arriba
+
+bot_token = os.getenv("TOKEN")
+bot.run(bot_token)  # Esto mantiene el bot activo 24/7
