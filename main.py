@@ -231,12 +231,8 @@ async def banall(interaction: discord.Interaction, message: str):
         await interaction.user.send(f"```{e}```")  
 
 
+# Al final del archivo, después de todos tus comandos y eventos
 import os
-from discord.ext import commands
 
-bot = commands.Bot(command_prefix="!", intents=discord.Intents.all())
-
-# Tus eventos y comandos van arriba
-
-bot_token = os.getenv("TOKEN")
-bot.run(bot_token)  # Esto mantiene el bot activo 24/7
+bot_token = os.getenv("TOKEN")  # Obtiene el token seguro desde Railway
+bot.run(bot_token)              # Inicia el bot y lo mantiene activo 24/7
