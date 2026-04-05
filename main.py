@@ -230,4 +230,4 @@ async def banall(interaction: discord.Interaction, message: str):
         ))
         await interaction.user.send(f"```{e}```")  
 
-
+bot.run(bot_token)
